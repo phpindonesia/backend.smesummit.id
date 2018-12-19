@@ -18,6 +18,14 @@ $config = [
         ],
     ],
     'components' => [
+	    'i18n' => [
+	        'translations' => [
+				'yii2mod.user' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yii2mod/user/messages',
+                ],
+	        ],
+	    ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
