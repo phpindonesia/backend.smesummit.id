@@ -52,6 +52,18 @@ $config = [
             ],
         ],
         'db' => $db,
+        'db2' => [
+                'class' => 'yii\db\Connection',
+                'dsn' => 'mysql:host=localhost;dbname=smesummit',
+                'username' => 'smesummit',
+                'password' => 'smesummit123QWEASDZXC!@#...',
+                'charset' => 'utf8',
+            
+                // Schema cache options (for production environment)
+                //'enableSchemaCache' => true,
+                //'schemaCacheDuration' => 60,
+                //'schemaCache' => 'cache',            
+        ],
         'urlManager' => [
             //'enablePrettyUrl' => true,
             //'showScriptName' => false,
