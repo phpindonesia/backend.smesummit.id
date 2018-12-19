@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11dc19ae1bd8fd0737fec254fc20f7de",
+    "content-hash": "95b2353d8135f5f88a2c2b4a74488a96",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -267,6 +267,107 @@
                 "mailer"
             ],
             "time": "2018-07-31T09:26:32+00:00"
+        },
+        {
+            "name": "yii2mod/yii2-enum",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2mod/yii2-enum.git",
+                "reference": "7af030e19636ece5fd0adb5d6012d2b03fa63895"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2mod/yii2-enum/zipball/7af030e19636ece5fd0adb5d6012d2b03fa63895",
+                "reference": "7af030e19636ece5fd0adb5d6012d2b03fa63895",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii2mod\\enum\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Semenov",
+                    "email": "disemx@gmail.com"
+                },
+                {
+                    "name": "Igor Chepurnoi",
+                    "email": "igorzfort@gmail.com"
+                }
+            ],
+            "description": "Yii2 Enumerable helpers",
+            "keywords": [
+                "enumerable helper",
+                "yii2",
+                "yii2 enum"
+            ],
+            "time": "2017-04-19T22:06:46+00:00"
+        },
+        {
+            "name": "yii2mod/yii2-user",
+            "version": "2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2mod/yii2-user.git",
+                "reference": "357fb3f1ce1ba1c4c09c81cbec7a5390ae0f7b2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2mod/yii2-user/zipball/357fb3f1ce1ba1c4c09c81cbec7a5390ae0f7b2c",
+                "reference": "357fb3f1ce1ba1c4c09c81cbec7a5390ae0f7b2c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "yii2mod/yii2-enum": "*",
+                "yiisoft/yii2": ">=2.0.8",
+                "yiisoft/yii2-swiftmailer": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii2mod\\user\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Semenov",
+                    "email": "disemx@gmail.com"
+                },
+                {
+                    "name": "Igor Chepurnoy",
+                    "email": "igorzfort@gmail.com"
+                }
+            ],
+            "description": "User module",
+            "keywords": [
+                "User management",
+                "user module",
+                "yii2",
+                "yii2-user"
+            ],
+            "time": "2017-06-08T14:56:54+00:00"
         },
         {
             "name": "yiisoft/yii2",
