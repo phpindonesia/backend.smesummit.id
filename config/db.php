@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=smesummit.id;dbname=smesummit',
-    'username' => 'smesummit',
-    'password' => 'smesummit123QWEASDZXC!@#...',
+    'dsn' => 'mysql:host=localhost;dbname=master_sme',
+    'username' => 'master_sme',
+    'password' => '25April2019',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
