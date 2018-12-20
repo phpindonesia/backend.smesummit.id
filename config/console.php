@@ -18,6 +18,9 @@ $config = [
         ],
     ],
     'components' => [
+		'authManager' => [
+            'class' => 'yii\rbac\DbManager', 
+        ],
 	    'i18n' => [
 	        'translations' => [
 				'yii2mod.user' => [

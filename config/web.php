@@ -12,8 +12,30 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+			'layout' => 'left-menu',
+        ]
+    ],
     'components' => [
-	    'i18n' => [
+		'authManager' => [
+            'class' => 'yii\rbac\DbManager', 
+        ],
+		'as access' => [
+			'class' => 'mdm\admin\components\AccessControl',
+			'allowActions' => [
+				'site/*',
+				//'admin/*',
+				//'some-controller/some-action',
+				// The actions listed here will be allowed to everyone including guests.
+				// So, 'admin/*' should not appear here in the production, of course.
+				// But in the earlier stages of your development, you may probably want to
+				// add a lot of actions here until you finally completed setting up rbac,
+				// otherwise you may not even take a first step.
+			]
+		],
+		'i18n' => [
 	        'translations' => [
 				'yii2mod.user' => [
                     'class' => 'yii\i18n\PhpMessageSource',
@@ -26,7 +48,7 @@ $config = [
             'cookieValidationKey' => '4xcVIr8tVdK5guj0cZPJ1pB9Uxvc8AWY',
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => 'yii\caching\DummyCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
@@ -54,7 +76,7 @@ $config = [
         'db' => $db,
         'db2' => [
                 'class' => 'yii\db\Connection',
-                'dsn' => 'mysql:host=localhost;dbname=smesummit',
+                'dsn' => 'mysql:host=smesummit.id;dbname=smesummit',
                 'username' => 'smesummit',
                 'password' => 'smesummit123QWEASDZXC!@#...',
                 'charset' => 'utf8',
