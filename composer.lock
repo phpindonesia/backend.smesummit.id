@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df60265a49c13fa406c7df0ae756e71e",
+    "content-hash": "701a97bea0ea2761c0c6f6d89da2c134",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -216,7 +216,7 @@
         },
         {
             "name": "mdmsoft/yii2-admin",
-            "version": "dev-master",
+            "version": "2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
@@ -3402,9 +3402,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mdmsoft/yii2-admin": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
