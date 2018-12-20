@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Menu';
 ?>
 <div class="site-index">
 
@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Backend Management for www.smesummit.id</p>
 
-        <p><a class="btn btn-lg btn-success" href="<?= Url::to(['site/login']) ?>">Login</a></p>
+        <p><a class="btn btn-lg btn-success" href="#">Menu</a></p>
     </div>
 
     <div class="body-content">
