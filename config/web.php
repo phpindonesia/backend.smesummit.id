@@ -88,8 +88,8 @@ $config = [
         'db' => $db,
         'db2' => $db2,
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            //'showScriptName' => false,
+            // 'enablePrettyUrl' => true,
+            // 'showScriptName' => false,
             'rules' => [
             ],
         ],
