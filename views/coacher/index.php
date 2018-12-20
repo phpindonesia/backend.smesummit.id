@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'last_education',
             // 'experience:ntext',
             'phone',
-            // 'company_sector',
+            // 'sector',
             'topic',
             // 'created_at',
 

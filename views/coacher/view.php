@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'valueColOptions' => [ 'style'=>'width:30%' ],
                     ],
                     [
-                        'attribute' => 'company_sector',
+                        'attribute' => 'sector',
                         'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
                         'valueColOptions' => [ 'style'=>'width:30%' ],
                     ],
