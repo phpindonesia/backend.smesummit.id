@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use mdm\admin\components\MenuHelper;
 
 AppAsset::register($this);
 ?>
@@ -27,32 +28,40 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
+<?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => 'Titan ERP',
+        //'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
+
+    if (!Yii::$app->user->isGuest) {
+        $menuItemsLeft = MenuHelper::getAssignedMenu(Yii::$app->user->id);
+
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav'],
+            'items' => $menuItemsLeft,
+        ]);
+
+        //$menuItems2[] = ['label' => 'Reset Password', 'url' => ['/site/request-password-reset']];
+        $menuItems2[] = '<li><a>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
+                        'Logout',
+                    ['class' => 'btn btn-link']
                 )
                 . Html::endForm()
-                . '</li>'
-            )
-        ],
+                . '</a></li>';
+
+        $menuItems[] = ['label' => 'Hi, '.Yii::$app->user->id, 'items' => $menuItems2];
+    } else {
+        $menuItems[] = ['label' => '', 'url' => ['/site/login']];
+    }
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => $menuItems,
     ]);
     NavBar::end();
     ?>
