@@ -16,7 +16,7 @@ use Yii;
  * @property string $last_education
  * @property string $experience
  * @property string $phone
- * @property string $company_sector
+ * @property string $sector
  * @property string $topic
  * @property string $created_at
  */
@@ -44,12 +44,12 @@ class Coacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'company_name', 'position', 'email', 'last_education', 'experience', 'phone', 'company_sector', 'topic'], 'required'],
+            [['name', 'company_name', 'position', 'email', 'last_education', 'experience', 'phone', 'sector', 'topic'], 'required'],
             [['experience'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'company_name', 'email', 'photo', 'topic'], 'string', 'max' => 255],
             [['position', 'last_education'], 'string', 'max' => 64],
-            [['phone', 'company_sector'], 'string', 'max' => 32],
+            [['phone', 'sector'], 'string', 'max' => 32],
         ];
     }
 
@@ -68,7 +68,7 @@ class Coacher extends \yii\db\ActiveRecord
             'last_education' => Yii::t('app', 'Last Education'),
             'experience' => Yii::t('app', 'Experience'),
             'phone' => Yii::t('app', 'Phone'),
-            'company_sector' => Yii::t('app', 'Company Sector'),
+            'sector' => Yii::t('app', 'Company Sector'),
             'topic' => Yii::t('app', 'Topic'),
             'created_at' => Yii::t('app', 'Created At'),
         ];
