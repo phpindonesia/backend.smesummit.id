@@ -18,7 +18,7 @@ class SpeakerSearch extends Speaker
     {
         return [
             [['id'], 'integer'],
-            [['name', 'company_name', 'position', 'email', 'photo', 'last_education', 'experience', 'phone', 'company_sector', 'topic', 'created_at'], 'safe'],
+            [['name', 'company_name', 'position', 'email', 'photo', 'last_education', 'experience', 'phone', 'sector', 'topic', 'created_at'], 'safe'],
         ];
     }
 
@@ -70,7 +70,7 @@ class SpeakerSearch extends Speaker
             ->andFilterWhere(['like', 'last_education', $this->last_education])
             ->andFilterWhere(['like', 'experience', $this->experience])
             ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'company_sector', $this->company_sector])
+            ->andFilterWhere(['like', 'sector', $this->sector])
             ->andFilterWhere(['like', 'topic', $this->topic]);
 
         return $dataProvider;
