@@ -21,9 +21,18 @@ $config = [
 	'as access' => [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
-			'site/*',
-			//'admin/*',
-			//'some-controller/some-action',
+            'site/*',
+            /**
+             * silakn hpus jika tidak diperlukan
+             */
+            'admin/*',
+            'participant/*',
+            'sponsor/*',
+            'speaker/*',
+            'coacher/*',
+            'volunteer/*',
+            /********************* */
+			// 'some-controller/some-action',
 			// The actions listed here will be allowed to everyone including guests.
 			// So, 'admin/*' should not appear here in the production, of course.
 			// But in the earlier stages of your development, you may probably want to
@@ -87,7 +96,7 @@ $config = [
                 //'schemaCache' => 'cache',            
         ],
         'urlManager' => [
-            //'enablePrettyUrl' => true,
+            'enablePrettyUrl' => true,
             //'showScriptName' => false,
             'rules' => [
             ],
