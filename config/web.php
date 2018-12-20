@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$db = require __DIR__ . '/db2.php';
 
 $config = [
     'id' => 'basic',
@@ -21,10 +22,12 @@ $config = [
 	'as access' => [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
-            'site/*',
+			'site/*',
+			//'some-controller/some-action',
             /**
              * silakn hpus jika tidak diperlukan
              */
+            'gii/*',
             'admin/*',
             'participant/*',
             'sponsor/*',
@@ -83,18 +86,7 @@ $config = [
             ],
         ],
         'db' => $db,
-        'db2' => [
-                'class' => 'yii\db\Connection',
-                'dsn' => 'mysql:host=smesummit.id;dbname=smesummit',
-                'username' => 'smesummit',
-                'password' => 'smesummit123QWEASDZXC!@#...',
-                'charset' => 'utf8',
-            
-                // Schema cache options (for production environment)
-                //'enableSchemaCache' => true,
-                //'schemaCacheDuration' => 60,
-                //'schemaCache' => 'cache',            
-        ],
+        'db2' => $db2,
         'urlManager' => [
             'enablePrettyUrl' => true,
             //'showScriptName' => false,
@@ -128,7 +120,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1', '::1','139.255.24.178'],
+        'allowedIPs' => ['localhost','127.0.0.1', '::1','139.255.24.178'],
     ];
 }
 
