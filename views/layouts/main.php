@@ -39,11 +39,11 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Participants', 'url' => ['/participant/index']],
-            ['label' => 'Sponsors', 'url' => ['/sponsor/index']],
-            ['label' => 'Speakers', 'url' => ['/speaker/index']],
-            ['label' => 'Coachers', 'url' => ['/coacher/index']],
-            ['label' => 'Volunteers', 'url' => ['/volunteer/index']],
+            ['label' => 'Participants', 'url' => ['/participant/index'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Sponsors', 'url' => ['/sponsor/index'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Speakers', 'url' => ['/speaker/index'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Coachers', 'url' => ['/coacher/index'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Volunteers', 'url' => ['/volunteer/index'], 'visible' => !Yii::$app->user->isGuest],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
