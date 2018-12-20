@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'vAlign' => DetailView::ALIGN_MIDDLE,
         'panel' => [
             'type' => DetailView::TYPE_INFO, 
-            'heading' => '<i class="glyphicon glyphicon-book"></i>  <strong>Coacher Details</strong>',
+            'heading' => '<i class="glyphicon glyphicon-book"></i>  <strong>Participant Details</strong>',
             'footer' => '<div class="text-center text-muted">'. $model->name . ': ' . $model->company_name .'</div>'
         ],
         'buttons1' => '',

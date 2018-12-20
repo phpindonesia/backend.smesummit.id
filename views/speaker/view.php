@@ -42,23 +42,79 @@ $this->params['breadcrumbs'][] = $this->title;
         'vAlign' => DetailView::ALIGN_MIDDLE,
         'panel' => [
             'type' => DetailView::TYPE_INFO, 
-            'heading' => '<i class="glyphicon glyphicon-book"></i>  <strong>Coacher Details</strong>',
+            'heading' => '<i class="glyphicon glyphicon-book"></i>  <strong>Speaker Details</strong>',
             'footer' => '<div class="text-center text-muted">'. $model->name . ': ' . $model->company_name .'</div>'
         ],
         'buttons1' => '',
         'buttons2' => '',
         'attributes' => [
             // 'id',
-            'name',
-            'position',
-            'company_name',
-            'sector',
-            'phone',
-            'email:email',
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'name',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'company_name',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'position',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'sector',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'topic',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:80%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'phone',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'email',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'last_education',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'experience',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
             // 'photo',
-            'last_education',
-            'experience:ntext',
-            'topic',
             // 'created_at',
         ],
     ]) ?>

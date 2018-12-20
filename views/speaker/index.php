@@ -45,15 +45,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'name',
-            'company_name',
-            'position',
             // 'email:email',
             // 'photo',
             // 'last_education',
             // 'experience:ntext',
             'phone',
-            // 'sector',
             'topic',
+            'company_name',
+            'position',
+            // 'sector',
             // 'created_at',
 
             ['class' => 'kartik\grid\ActionColumn'],
