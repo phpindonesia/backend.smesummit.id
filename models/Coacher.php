@@ -36,7 +36,7 @@ class Coacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'company_name', 'position', 'email', 'photo', 'last_education', 'experience', 'phone', 'company_sector', 'topic', 'created_at'], 'required'],
+            [['name', 'company_name', 'position', 'email', 'last_education', 'experience', 'phone', 'company_sector', 'topic'], 'required'],
             [['experience'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'company_name', 'email', 'photo', 'topic'], 'string', 'max' => 255],
