@@ -22,7 +22,8 @@ $config = [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
 			'site/*',
-			//'admin/*',
+            'admin/*',
+            'gii/*'
 			//'some-controller/some-action',
 			// The actions listed here will be allowed to everyone including guests.
 			// So, 'admin/*' should not appear here in the production, of course.
@@ -76,7 +77,7 @@ $config = [
         'db' => $db,
         'db2' => [
                 'class' => 'yii\db\Connection',
-                'dsn' => 'mysql:host=smesummit.id;dbname=smesummit',
+                'dsn' => 'mysql:host=localhost;dbname=smesummit',
                 'username' => 'smesummit',
                 'password' => 'smesummit123QWEASDZXC!@#...',
                 'charset' => 'utf8',
@@ -109,7 +110,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1', '::1','139.255.24.178'],
+        'allowedIPs' => ['localhost','127.0.0.1', '::1','139.255.24.178'],
     ];
 }
 
