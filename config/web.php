@@ -13,12 +13,6 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'modules' => [
-        'admin' => [
-            'class' => 'mdm\admin\Module',
-			'layout' => 'left-menu',
-        ]
-    ],
 	'as access' => [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
@@ -27,13 +21,13 @@ $config = [
             /**
              * silakn hpus jika tidak diperlukan
              */
-            'gii/*',
-            'admin/*',
-            'participant/*',
-            'sponsor/*',
-            'speaker/*',
-            'coacher/*',
-            'volunteer/*',
+            //'gii/*',
+            //'admin/*',
+            //'participant/*',
+            //'sponsor/*',
+            //'speaker/*',
+            //'coacher/*',
+            //'volunteer/*',
             /********************* */
 			// 'some-controller/some-action',
 			// The actions listed here will be allowed to everyone including guests.
@@ -95,6 +89,10 @@ $config = [
         ],
     ],
     'modules' => [
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+			'layout' => 'left-menu',
+        ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module',
             // enter optional module parameters below - only if you need to
