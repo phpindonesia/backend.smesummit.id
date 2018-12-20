@@ -30,7 +30,7 @@ AppAsset::register($this);
 <div class="wrap">
 <?php
     NavBar::begin([
-        'brandLabel' => 'SME Summit Backend Management',
+        'brandLabel' => 'Backend Management',
         //'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
