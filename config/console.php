@@ -12,7 +12,23 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'user' => [
+            'class' => 'yii2mod\user\ConsoleModule',
+        ],
+    ],
     'components' => [
+		'authManager' => [
+            'class' => 'yii\rbac\DbManager', 
+        ],
+	    'i18n' => [
+	        'translations' => [
+				'yii2mod.user' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yii2mod/user/messages',
+                ],
+	        ],
+	    ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

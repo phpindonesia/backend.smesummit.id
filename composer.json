@@ -18,6 +18,9 @@
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yii2mod/yii2-user": "^2.1",
+        "mdmsoft/yii2-admin": "~2.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
         "kartik-v/yii2-grid": "dev-master",
         "kartik-v/yii2-detail-view": "dev-master"
     },
