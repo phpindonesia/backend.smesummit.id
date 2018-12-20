@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "sponsors".
  *
- * @property int $id
+ * @property string $id
  * @property string $company_name
  * @property string $company_sector
  * @property string $email_pic
@@ -53,13 +53,22 @@ class Sponsor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'company_name' => 'Company Name',
-            'company_sector' => 'Company Sector',
-            'email_pic' => 'Email Pic',
-            'phone' => 'Phone',
-            'sponsor_type' => 'Sponsor Type',
-            'created_at' => 'Created At',
+            'id' => Yii::t('app', 'ID'),
+            'company_name' => Yii::t('app', 'Company Name'),
+            'company_sector' => Yii::t('app', 'Company Sector'),
+            'email_pic' => Yii::t('app', 'Email Pic'),
+            'phone' => Yii::t('app', 'Phone'),
+            'sponsor_type' => Yii::t('app', 'Sponsor Type'),
+            'created_at' => Yii::t('app', 'Created At'),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return SponsorQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new SponsorQuery(get_called_class());
     }
 }

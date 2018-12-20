@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "participants".
  *
- * @property int $id
+ * @property string $id
  * @property string $name
  * @property string $company_name
  * @property string $position
@@ -55,16 +55,25 @@ class Participant extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'company_name' => 'Company Name',
-            'position' => 'Position',
-            'coached_sector' => 'Coached Sector',
-            'company_sector' => 'Company Sector',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'problem_desc' => 'Problem Desc',
-            'created_at' => 'Created At',
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'company_name' => Yii::t('app', 'Company Name'),
+            'position' => Yii::t('app', 'Position'),
+            'coached_sector' => Yii::t('app', 'Coached Sector'),
+            'company_sector' => Yii::t('app', 'Company Sector'),
+            'email' => Yii::t('app', 'Email'),
+            'phone' => Yii::t('app', 'Phone'),
+            'problem_desc' => Yii::t('app', 'Problem Desc'),
+            'created_at' => Yii::t('app', 'Created At'),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return ParticipantQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new ParticipantQuery(get_called_class());
     }
 }

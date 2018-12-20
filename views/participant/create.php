@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Participant */
 
-$this->title = 'Create Participant';
-$this->params['breadcrumbs'][] = ['label' => 'Participants', 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Participant');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Participants'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="participant-create">

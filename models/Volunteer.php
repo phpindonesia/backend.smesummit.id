@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "volunteers".
  *
- * @property int $id
+ * @property string $id
  * @property string $name
  * @property string $email
  * @property string $phone
@@ -52,12 +52,21 @@ class Volunteer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'why_you_apply_desc' => 'Why You Apply Desc',
-            'created_at' => 'Created At',
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'email' => Yii::t('app', 'Email'),
+            'phone' => Yii::t('app', 'Phone'),
+            'why_you_apply_desc' => Yii::t('app', 'Why You Apply Desc'),
+            'created_at' => Yii::t('app', 'Created At'),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return VolunteerQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new VolunteerQuery(get_called_class());
     }
 }

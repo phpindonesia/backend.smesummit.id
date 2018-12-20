@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "speaker".
  *
- * @property int $id
+ * @property string $id
  * @property string $name
  * @property string $company_name
  * @property string $position
@@ -59,18 +59,27 @@ class Speaker extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'company_name' => 'Company Name',
-            'position' => 'Position',
-            'email' => 'Email',
-            'photo' => 'Photo',
-            'last_education' => 'Last Education',
-            'experience' => 'Experience',
-            'phone' => 'Phone',
-            'company_sector' => 'Company Sector',
-            'topic' => 'Topic',
-            'created_at' => 'Created At',
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'company_name' => Yii::t('app', 'Company Name'),
+            'position' => Yii::t('app', 'Position'),
+            'email' => Yii::t('app', 'Email'),
+            'photo' => Yii::t('app', 'Photo'),
+            'last_education' => Yii::t('app', 'Last Education'),
+            'experience' => Yii::t('app', 'Experience'),
+            'phone' => Yii::t('app', 'Phone'),
+            'company_sector' => Yii::t('app', 'Company Sector'),
+            'topic' => Yii::t('app', 'Topic'),
+            'created_at' => Yii::t('app', 'Created At'),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return SpeakerQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new SpeakerQuery(get_called_class());
     }
 }

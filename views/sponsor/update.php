@@ -5,10 +5,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sponsor */
 
-$this->title = 'Update Sponsor: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Sponsors', 'url' => ['index']];
+$this->title = Yii::t('app', 'Update Sponsor: {name}', [
+    'name' => $model->id,
+]);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Sponsors'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="sponsor-update">
 

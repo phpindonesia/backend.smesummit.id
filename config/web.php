@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$db2 = require __DIR__ . '/db2.php';
 
 $config = [
     'id' => 'basic',
@@ -22,9 +23,19 @@ $config = [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
 			'site/*',
-            'admin/*',
-            'gii/*'
 			//'some-controller/some-action',
+            /**
+             * silakn hpus jika tidak diperlukan
+             */
+            'gii/*',
+            'admin/*',
+            'participant/*',
+            'sponsor/*',
+            'speaker/*',
+            'coacher/*',
+            'volunteer/*',
+            /********************* */
+			// 'some-controller/some-action',
 			// The actions listed here will be allowed to everyone including guests.
 			// So, 'admin/*' should not appear here in the production, of course.
 			// But in the earlier stages of your development, you may probably want to
@@ -75,23 +86,22 @@ $config = [
             ],
         ],
         'db' => $db,
-        'db2' => [
-                'class' => 'yii\db\Connection',
-                'dsn' => 'mysql:host=localhost;dbname=smesummit',
-                'username' => 'smesummit',
-                'password' => 'smesummit123QWEASDZXC!@#...',
-                'charset' => 'utf8',
-            
-                // Schema cache options (for production environment)
-                //'enableSchemaCache' => true,
-                //'schemaCacheDuration' => 60,
-                //'schemaCache' => 'cache',            
-        ],
+        'db2' => $db2,
         'urlManager' => [
-            //'enablePrettyUrl' => true,
+            'enablePrettyUrl' => true,
             //'showScriptName' => false,
             'rules' => [
             ],
+        ],
+    ],
+    'modules' => [
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module',
+            // enter optional module parameters below - only if you need to
+            // use your own export download action or custom translation
+            // message source
+            // 'downloadAction' => 'gridview/export/download',
+            // 'i18n' => []
         ],
     ],
     'params' => $params,
