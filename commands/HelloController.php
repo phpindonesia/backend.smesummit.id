@@ -31,4 +31,15 @@ class HelloController extends Controller
 
         return ExitCode::OK;
     }
+
+    public function actionTestEmail() 
+    {
+        Yii::$app->mailer->compose()
+        ->setFrom('info@smesummit.id')
+        ->setTo('peterjkambey@gmail.com')
+        ->setSubject('Testing Send From SME SUMMIT 2019')
+        ->setTextBody('Plain text content')
+        ->setHtmlBody('<b>HTML content</b>')
+        ->send();        
+    }
 }
