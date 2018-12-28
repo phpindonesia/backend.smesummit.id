@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'company_sector',
             // 'email:email',
             'phone',
-            'coached_sector',
+            'sector_to_be_coached',
             // 'problem_desc:ntext',
             // 'created_at',
 

@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'position') ?>
 
-    <?= $form->field($model, 'coached_sector') ?>
+    <?= $form->field($model, 'sector_to_be_coached') ?>
 
     <?php // echo $form->field($model, 'company_sector') ?>
 

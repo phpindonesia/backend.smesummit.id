@@ -94,7 +94,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'columns' => [
                     [
-                        'attribute' => 'coached_sector',
+                        'attribute' => 'sector_to_be_coached',
                         'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
                         'valueColOptions' => [ 'style'=>'width:80%' ],
                     ],

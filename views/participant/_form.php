@@ -41,7 +41,7 @@ use yii\widgets\ActiveForm;
 
     <div class="row">
         <div class="col-md-6">
-        <?= $form->field($model, 'coached_sector')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'sector_to_be_coached')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-6">
         <?= $form->field($model, 'problem_desc')->textInput(['maxlength' => true]) ?>

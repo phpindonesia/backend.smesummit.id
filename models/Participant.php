@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property string $company_name
  * @property string $position
- * @property string $coached_sector
+ * @property string $sector_to_be_coached
  * @property string $company_sector
  * @property string $email
  * @property string $phone
@@ -42,10 +42,10 @@ class Participant extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'company_name', 'position', 'coached_sector', 'company_sector', 'email', 'phone', 'problem_desc', 'created_at'], 'required'],
+            [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'email', 'phone', 'problem_desc', 'created_at'], 'required'],
             [['problem_desc'], 'string'],
             [['created_at'], 'safe'],
-            [['name', 'company_name', 'position', 'coached_sector', 'company_sector', 'email', 'phone'], 'string', 'max' => 255],
+            [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'email', 'phone'], 'string', 'max' => 255],
         ];
     }
 
@@ -59,7 +59,7 @@ class Participant extends \yii\db\ActiveRecord
             'name' => Yii::t('app', 'Name'),
             'company_name' => Yii::t('app', 'Company Name'),
             'position' => Yii::t('app', 'Position'),
-            'coached_sector' => Yii::t('app', 'Coached Sector'),
+            'sector_to_be_coached' => Yii::t('app', 'Coached Sector'),
             'company_sector' => Yii::t('app', 'Company Sector'),
             'email' => Yii::t('app', 'Email'),
             'phone' => Yii::t('app', 'Phone'),

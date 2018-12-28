@@ -18,7 +18,7 @@ class ParticipantSearch extends Participant
     {
         return [
             [['id'], 'integer'],
-            [['name', 'company_name', 'position', 'coached_sector', 'company_sector', 'email', 'phone', 'problem_desc', 'created_at'], 'safe'],
+            [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'email', 'phone', 'problem_desc', 'created_at'], 'safe'],
         ];
     }
 
@@ -65,7 +65,7 @@ class ParticipantSearch extends Participant
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'company_name', $this->company_name])
             ->andFilterWhere(['like', 'position', $this->position])
-            ->andFilterWhere(['like', 'coached_sector', $this->coached_sector])
+            ->andFilterWhere(['like', 'sector_to_be_coached', $this->sector_to_be_coached])
             ->andFilterWhere(['like', 'company_sector', $this->company_sector])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'phone', $this->phone])
