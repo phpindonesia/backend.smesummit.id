@@ -95,7 +95,7 @@ class TelegramController extends \yii\rest\Controller
         $client = new Client();
         $response = $client->createRequest()
                 ->setMethod('POST')
-                ->setUrl('https://api.telegram.org/bot662538159:AAG3n4xKFgsy0irOq0GpyokQvjhOjEOX7BA/sendMessage')
+                ->setUrl('https://api.telegram.org/bot'.Yii::$app->params['telegramBot'].'/sendMessage')
                 ->setData(['chat_id'=>$params['chat_id'],'text'=>$params['text']])
                 ->setFormat(Client::FORMAT_JSON)
                 ->send();
