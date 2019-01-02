@@ -9,6 +9,7 @@ namespace app\commands;
 
 use yii\console\Controller;
 use yii\console\ExitCode;
+use yii\httpclient\Client;
 use Yii;
 
 /**
@@ -62,7 +63,7 @@ class TelegramController extends Controller
         $client = new Client();
         $response = $client->createRequest()
             ->setMethod('POST')
-            ->setUrl('https://api.telegram.org/bot662538159:AAG3n4xKFgsy0irOq0GpyokQvjhOjEOX7BA/sendMessage')
+            ->setUrl('https://api.telegram.org/bot'.Yii::$app->params['telegramBot'].'/sendMessage')
             ->setData(['chat_id'=>$chat_id,'text'=>$params['text']])
             ->setFormat(Client::FORMAT_JSON)
             ->send();
