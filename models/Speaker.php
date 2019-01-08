@@ -45,7 +45,7 @@ class Speaker extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'company_name', 'position', 'email', 'last_education', 'experience', 'phone', 'sector', 'topic'], 'required'],
-            [['experience'], 'string'],
+            [['experience','status'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'company_name', 'email', 'photo', 'topic'], 'string', 'max' => 255],
             [['position', 'last_education'], 'string', 'max' => 64],
