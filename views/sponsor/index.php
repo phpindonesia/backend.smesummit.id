@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'email_pic:email',
             'phone',
             'sponsor_type',
-            // 'created_at',
+            'status',
 
             ['class' => 'kartik\grid\ActionColumn'],
         ],

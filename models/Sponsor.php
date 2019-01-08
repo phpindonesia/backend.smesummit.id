@@ -40,10 +40,12 @@ class Sponsor extends \yii\db\ActiveRecord
     {
         return [
             [['company_name', 'company_sector', 'email_pic', 'phone', 'sponsor_type', 'created_at'], 'required'],
-            [['sponsor_type'], 'string'],
-            [['created_at'], 'safe'],
-            [['company_name', 'company_sector', 'email_pic'], 'string', 'max' => 255],
+            [['sponsor_type', 'status'], 'string'],
+            [['payment_amount'], 'number'],
+            [['created_at', 'payment_date'], 'safe'],
+            [['company_name', 'company_sector', 'email_pic', 'payment_reference'], 'string', 'max' => 255],
             [['phone'], 'string', 'max' => 32],
+            [['remarks'], 'string', 'max' => 500],
         ];
     }
 

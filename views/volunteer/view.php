@@ -86,7 +86,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ],
             ],
-            'created_at',
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'created_at',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:80%' ],
+                    ],
+                ],
+            ],
         ],
     ]) ?>
 

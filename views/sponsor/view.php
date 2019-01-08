@@ -6,7 +6,7 @@ use kartik\detail\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sponsor */
 
-$this->title = $model->id;
+$this->title = $model->company_name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Sponsors'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -49,12 +49,57 @@ $this->params['breadcrumbs'][] = $this->title;
         'buttons2' => '',
         'attributes' => [
             // 'id',
-            'company_name',
-            'company_sector',
-            'phone',
-            'email_pic:email',
-            'sponsor_type',
-            // 'created_at',
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'company_name',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'company_sector',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'phone',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'email_pic',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'sponsor_type',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'status',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'created_at',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:80%' ],
+                    ],
+                ],
+            ],
         ],
     ]) ?>
 

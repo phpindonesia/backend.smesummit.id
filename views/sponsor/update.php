@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Sponsor */
 
 $this->title = Yii::t('app', 'Update Sponsor: {name}', [
-    'name' => $model->id,
+    'name' => $model->company_name,
 ]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Sponsors'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];

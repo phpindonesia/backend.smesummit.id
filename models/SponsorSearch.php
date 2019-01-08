@@ -18,7 +18,7 @@ class SponsorSearch extends Sponsor
     {
         return [
             [['id'], 'integer'],
-            [['company_name', 'company_sector', 'email_pic', 'phone', 'sponsor_type', 'created_at'], 'safe'],
+            [['company_name', 'company_sector', 'email_pic', 'phone', 'sponsor_type', 'created_at','status','remarks','payment_date','payment_amount'], 'safe'],
         ];
     }
 
@@ -60,13 +60,17 @@ class SponsorSearch extends Sponsor
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
+            'payment_date' => $this->payment_date,
+            'payment_amount' => $this->payment_amount,
         ]);
 
         $query->andFilterWhere(['like', 'company_name', $this->company_name])
             ->andFilterWhere(['like', 'company_sector', $this->company_sector])
             ->andFilterWhere(['like', 'email_pic', $this->email_pic])
             ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'sponsor_type', $this->sponsor_type]);
+            ->andFilterWhere(['like', 'sponsor_type', $this->sponsor_type])
+            ->andFilterWhere(['like', 'remarks', $this->remarks])
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
     }
