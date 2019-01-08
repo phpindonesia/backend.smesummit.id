@@ -21,7 +21,8 @@
         "yii2mod/yii2-user": "^2.1",
         "mdmsoft/yii2-admin": "~2.0",
         "kartik-v/yii2-grid": "dev-master",
-        "kartik-v/yii2-detail-view": "dev-master"
+        "kartik-v/yii2-detail-view": "dev-master",
+        "kartik-v/yii2-widgets": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
