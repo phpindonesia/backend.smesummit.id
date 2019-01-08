@@ -32,10 +32,20 @@ use yii\widgets\ActiveForm;
 
     <div class="row">
         <div class="col-md-6">
-        <?= $form->field($model, 'sponsor_type')->dropDownList([ 'platinum' => 'Platinum', 'gold' => 'Gold', 'silver' => 'Silver', ], ['prompt' => '']) ?>
+        <?= $form->field($model, 'sponsor_type')->dropDownList([ 
+            'platinum' => 'Platinum', 
+            'gold' => 'Gold', 'silver' => 
+            'Silver', 
+        ], ['prompt' => '* Choose Type *']) ?>
         </div>
         <div class="col-md-6">
-        <?= $form->field($model, 'status')->dropDownList([ 'New Request' => 'New Request', 'Invoice Sent' => 'Invoice Sent', 'Confirmed' => 'Confirmed', 'Canceled' => 'Canceled', ], ['prompt' => '']) ?>
+        <?= $form->field($model, 'status')->dropDownList([ 
+            'New Request' => 'New Request', 
+            'Invoice Sent' => 'Invoice Sent', 
+            'Confirmed' => 'Confirmed', 
+            'Canceled' => 'Canceled', 
+            'Rejected' => 'Rejected', 
+        ], ['prompt' => '* Choose Status *']) ?>
         </div>
     </div>
 
