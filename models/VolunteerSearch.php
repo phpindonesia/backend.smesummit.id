@@ -18,7 +18,7 @@ class VolunteerSearch extends Volunteer
     {
         return [
             [['id'], 'integer'],
-            [['name', 'email', 'phone', 'why_you_apply_desc', 'created_at'], 'safe'],
+            [['name', 'city', 'email', 'phone', 'why_you_apply_desc', 'created_at'], 'safe'],
         ];
     }
 
@@ -63,6 +63,7 @@ class VolunteerSearch extends Volunteer
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'city', $this->city])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'phone', $this->phone])
             ->andFilterWhere(['like', 'why_you_apply_desc', $this->why_you_apply_desc]);

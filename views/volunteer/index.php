@@ -45,6 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'name',
+            'city',
             'email:email',
             'phone',
             'why_you_apply_desc:ntext',

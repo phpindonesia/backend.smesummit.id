@@ -49,11 +49,44 @@ $this->params['breadcrumbs'][] = $this->title;
         'buttons2' => '',
         'attributes' => [
             // 'id',
-            'name',
-            'phone',
-            'email:email',
-            'why_you_apply_desc:ntext',
-            // 'created_at',
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'name',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'phone',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'city',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'email',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'why_you_apply_desc',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:80%' ],
+                    ],
+                ],
+            ],
+            'created_at',
         ],
     ]) ?>
 
