@@ -39,7 +39,7 @@ class Volunteer extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'email', 'phone', 'why_you_apply_desc', 'created_at'], 'required'],
-            [['why_you_apply_desc'], 'string'],
+            [['why_you_apply_desc','status'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'email'], 'string', 'max' => 255],
             [['phone'], 'string', 'max' => 32],
@@ -56,6 +56,7 @@ class Volunteer extends \yii\db\ActiveRecord
             'name' => Yii::t('app', 'Name'),
             'email' => Yii::t('app', 'Email'),
             'phone' => Yii::t('app', 'Phone'),
+            'status' => Yii::t('app', 'Status'),
             'why_you_apply_desc' => Yii::t('app', 'Why You Apply Desc'),
             'created_at' => Yii::t('app', 'Created At'),
         ];

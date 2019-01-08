@@ -30,6 +30,18 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+        <?= $form->field($model, 'status')->dropDownList([ 
+            'New Request' => 'New Request', 
+            'Follow Up' => 'Follow Up', 
+            'Confirmed' => 'Confirmed', 
+            'Canceled' => 'Canceled', 
+            'Rejected' => 'Rejected', 
+        ], ['prompt' => '* Choose Status *']) ?>
+        </div>
+    </div>
+
     <?= $form->field($model, 'why_you_apply_desc')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">

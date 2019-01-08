@@ -61,6 +61,7 @@ class Sponsor extends \yii\db\ActiveRecord
             'email_pic' => Yii::t('app', 'Email Pic'),
             'phone' => Yii::t('app', 'Phone'),
             'sponsor_type' => Yii::t('app', 'Sponsor Type'),
+            'status' => Yii::t('app', 'Status'),
             'created_at' => Yii::t('app', 'Created At'),
         ];
     }
