@@ -3,12 +3,17 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\CoacherSearch;
+use app\models\SpeakerSearch;
+use app\models\ParticipantSearch;
+use app\models\VolunteerSearch;
+use app\models\SponsorSearch;
 
 class SiteController extends Controller
 {
@@ -61,7 +66,36 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModelParticipant = new ParticipantSearch();
+        $dataProviderParticipant = $searchModelParticipant->search(Yii::$app->request->queryParams);
+        $searchModelCoacher = new CoacherSearch();
+        $dataProviderCoacher = $searchModelCoacher->search(Yii::$app->request->queryParams);
+        $searchModelSponsor = new SponsorSearch();
+        $dataProviderSponsor = $searchModelSponsor->search(Yii::$app->request->queryParams);
+        $searchModelVolunteer = new VolunteerSearch();
+        $dataProviderVolunteer = $searchModelVolunteer->search(Yii::$app->request->queryParams);
+        $searchModelSpeaker = new SpeakerSearch();
+        $dataProviderSpeaker = $searchModelSpeaker->search(Yii::$app->request->queryParams);
+
+        $pageSize = 5;
+        $dataProviderParticipant->pagination->pageSize = $pageSize;
+        $dataProviderCoacher->pagination->pageSize = $pageSize;
+        $dataProviderSpeaker->pagination->pageSize = $pageSize;
+        $dataProviderSponsor->pagination->pageSize = $pageSize;
+        $dataProviderVolunteer->pagination->pageSize = $pageSize;
+
+        return $this->render('index', [
+            'dataProviderParticipant' => $dataProviderParticipant,
+            'dataProviderCoacher' => $dataProviderCoacher,
+            'dataProviderSponsor' => $dataProviderSponsor,
+            'dataProviderVolunteer' => $dataProviderVolunteer,
+            'dataProviderSpeaker' => $dataProviderSpeaker,
+            'searchModelParticipant' => $searchModelParticipant,
+            'searchModelCoacher' => $searchModelCoacher,
+            'searchModelSponsor' => $searchModelSponsor,
+            'searchModelVolunteer' => $searchModelVolunteer,
+            'searchModelSpeaker' => $searchModelSpeaker,
+        ]);
     }
 
     /**

@@ -1,156 +1,162 @@
 <?php
 
+use yii\helpers\Url;
+use yii\helpers\Html;
 use kartik\grid\GridView;
 ?>
 
+<h1>For Internal Use Only</h1>
+<div>&nbsp;</div>
 <div class="row">
-    <div class="col-md-4">
-    <h4>Participant</h4>
-
-
+    <div class="col-sm-12 col-md-6">
         <?= GridView::widget([
             'dataProvider' => $dataProviderParticipant,
             'bordered' => true,
             'striped' => true,
-            'condensed' => false,
+            'condensed' => true,
             'responsive' => true,
+            'hover' => true,
+            'panel' => [
+                'type' => GridView::TYPE_INFO, 
+                'heading' => '<i class="glyphicon glyphicon-th-list"></i>   <strong>Participants List</strong>',
+            ],
+            'toolbar' =>  [ 
+                ['content'=>
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;'.Yii::t('app', 'New Participant'), ['create'], [
+                        'data-pjax' => 0, 
+                        'class' => 'btn btn-success', 
+                        'title' => Yii::t('app', 'New Participant')
+                    ])
+                ],
+                '{toggleData}' 
+            ],
             'columns' => [
-                //['class' => 'kartik\grid\SerialColumn'],
-
-                // 'id',
                 'name',
                 'company_name',
-                //'position',
-                // 'company_sector',
-                // 'email:email',
-                //'phone',
-                //'sector_to_be_coached',
-                // 'problem_desc:ntext',
-                // 'created_at',
-
-                //['class' => 'kartik\grid\ActionColumn'],
             ],
         ]); ?>
     </div>
-
-    <div class="col-md-4">
-    <h4>Coacher</h4>
-
-
+    <div class="col-sm-12 col-md-6">
         <?= GridView::widget([
-            'dataProvider' => $dataProviderCoacher,
+            'dataProvider' => $dataProviderVolunteer,
             'bordered' => true,
             'striped' => true,
-            'condensed' => false,
+            'condensed' => true,
             'responsive' => true,
             'hover' => true,
+            'panel' => [
+                'type' => GridView::TYPE_INFO, 
+                'heading' => '<i class="glyphicon glyphicon-th-list"></i>   <strong>Volunteers List</strong>',
+            ],
+            'toolbar' =>  [ 
+                ['content'=>
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;'.Yii::t('app', 'New Volunteer'), ['create'], [
+                        'data-pjax' => 0, 
+                        'class' => 'btn btn-success', 
+                        'title' => Yii::t('app', 'New Volunteer')
+                    ])
+                ],
+                '{toggleData}' 
+            ],
             'columns' => [
-                //['class' => 'kartik\grid\SerialColumn'],
-
-                // 'id',
                 'name',
-                'company_name',
-                //'position',
-                // 'email:email',
-                // 'photo',
-                // 'last_education',
-                // 'experience:ntext',
-                //'phone',
-                // 'sector',
-                //'topic',
-                // 'created_at',
+                'email:email',
             ],
         ]); ?>
+    </div>
+</div>
 
-    </div>    
-
-    <div class="col-md-4">
-    <h4>Sponsor</h4>
-
-
+<div class="row">
+    <div class="col-sm-12 col-md-6">
         <?= GridView::widget([
             'dataProvider' => $dataProviderSponsor,
             'bordered' => true,
             'striped' => true,
-            'condensed' => false,
+            'condensed' => true,
             'responsive' => true,
+            'hover' => true,
+            'panel' => [
+                'type' => GridView::TYPE_INFO, 
+                'heading' => '<i class="glyphicon glyphicon-th-list"></i>   <strong>Sponsors List</strong>',
+            ],
+            'toolbar' =>  [ 
+                ['content'=>
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;'.Yii::t('app', 'New Sponsor'), ['create'], [
+                        'data-pjax' => 0, 
+                        'class' => 'btn btn-success', 
+                        'title' => Yii::t('app', 'New Sponsor')
+                    ])
+                ],
+                '{toggleData}' 
+            ],
             'columns' => [
-                //['class' => 'kartik\grid\SerialColumn'],
-
-                // 'id',
                 'company_name',
                 'company_sector',
-                // 'email_pic:email',
                 'phone',
-                //'sponsor_type',
-                // 'created_at',
-
-                //['class' => 'kartik\grid\ActionColumn'],
+            ],
+        ]); ?>
+    </div>    
+    <div class="col-sm-12 col-md-6">
+        <?= GridView::widget([
+            'dataProvider' => $dataProviderCoacher,
+            'bordered' => true,
+            'striped' => true,
+            'condensed' => true,
+            'responsive' => true,
+            'hover' => true,
+            'panel' => [
+                'type' => GridView::TYPE_INFO, 
+                'heading' => '<i class="glyphicon glyphicon-th-list"></i>   <strong>Coachers List</strong>',
+            ],
+            'toolbar' =>  [ 
+                ['content'=>
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;'.Yii::t('app', 'New Coacher'), ['create'], [
+                        'data-pjax' => 0, 
+                        'class' => 'btn btn-success', 
+                        'title' => Yii::t('app', 'New Coacher')
+                    ])
+                ],
+                '{toggleData}' 
+            ],
+            'columns' => [
+                'name',
+                'company_name',
             ],
         ]); ?>
     </div>    
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-    <h4>Volunteer</h4>
-
-
-        <?= GridView::widget([
-            'dataProvider' => $dataProviderVolunteer,
-            'bordered' => true,
-            'striped' => true,
-            'condensed' => false,
-            'responsive' => true,
-            'columns' => [
-                //['class' => 'kartik\grid\SerialColumn'],
-
-                // 'id',
-                'name',
-                'email:email',
-                //'phone',
-                //'why_you_apply_desc:ntext',
-                // 'created_at',
-
-                //['class' => 'kartik\grid\ActionColumn'],
-            ],
-        ]); ?>
-    </div>
-
-    <div class="col-md-4">
-    <h4>Speaker</h4>
-
-
+    <div class="col-sm-12 col-md-6">
         <?= GridView::widget([
             'dataProvider' => $dataProviderSpeaker,
             'bordered' => true,
             'striped' => true,
-            'condensed' => false,
+            'condensed' => true,
             'responsive' => true,
+            'hover' => true,
+            'panel' => [
+                'type' => GridView::TYPE_INFO, 
+                'heading' => '<i class="glyphicon glyphicon-th-list"></i>   <strong>Speakers List</strong>',
+            ],
+            'toolbar' =>  [ 
+                ['content'=>
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;'.Yii::t('app', 'New Speaker'), ['create'], [
+                        'data-pjax' => 0, 
+                        'class' => 'btn btn-success', 
+                        'title' => Yii::t('app', 'New Speaker')
+                    ])
+                ],
+                '{toggleData}' 
+            ],
             'columns' => [
-                //['class' => 'kartik\grid\SerialColumn'],
-
-                // 'id',
                 'name',
-                // 'email:email',
-                // 'photo',
-                // 'last_education',
-                // 'experience:ntext',
                 'phone',
-                //'topic',
-                //'company_name',
-                //'position',
-                // 'sector',
-                // 'created_at',
-
-                //['class' => 'kartik\grid\ActionColumn'],
             ],
         ]); ?>
-
     </div>    
 
-    <div class="col-md-4">
-
+    <div class="col-sm-12 col-md-6">
     </div>    
 </div>
 
