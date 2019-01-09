@@ -84,7 +84,19 @@ $this->params['breadcrumbs'][] = $this->title;
                             return '<span class="label label-default">New Request</span>';
                     }
                 },
-                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '10%' ]
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => [ 
+                    'New Request' => 'New Request', 
+                    'Invoice Sent' => 'Invoice Sent', 
+                    'Confirmed' => 'Confirmed', 
+                    'Canceled' => 'Canceled', 
+                    'Rejected' => 'Rejected', 
+                ],
+                'filterWidgetOptions' => [
+                    'pluginOptions' => [ 'allowClear' => true ],
+                ],
+                'filterInputOptions' => [ 'placeholder' => '*All*' ],
+                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '12%' ]
             ],
 
             ['class' => 'kartik\grid\ActionColumn'],

@@ -43,7 +43,7 @@ class Participant extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'email', 'phone', 'problem_desc', 'created_at'], 'required'],
-            [['problem_desc'], 'string'],
+            [['problem_desc', 'status'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'email', 'phone'], 'string', 'max' => 255],
         ];

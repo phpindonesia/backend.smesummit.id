@@ -109,6 +109,38 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ],
             ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'status',
+                        'format'=>'raw',
+                        'value' => function ($form, $widget) { 
+                            $model = $widget->model;
+                            switch ($model->status) {
+                                case 'New Request':
+                                    return '<span class="label label-default">New Request</span>';
+                                case 'Invoice Sent':
+                                    return '<span class="label label-info">Invoice Sent</span>';
+                                case 'Confirmed':
+                                    return '<span class="label label-success">Confirmed</span>';
+                                case 'Canceled':
+                                    return '<span class="label label-warning">Canceled</span>';
+                                case 'Rejected':
+                                    return '<span class="label label-danger">Rejected</span>';
+                                default:
+                                    return '<span class="label label-default">New Request</span>';
+                            }
+                        },
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'created_at',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
             // 'created_at',
         ],
     ]) ?>

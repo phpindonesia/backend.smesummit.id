@@ -48,6 +48,18 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+        <?= $form->field($model, 'status')->dropDownList([ 
+            'New Request' => 'New Request', 
+            'Invoice Sent' => 'Invoice Sent', 
+            'Confirmed' => 'Confirmed', 
+            'Canceled' => 'Canceled', 
+            'Rejected' => 'Rejected', 
+        ], ['prompt' => '* Choose Status *']) ?>
+        </div>
+    </div>
+
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
