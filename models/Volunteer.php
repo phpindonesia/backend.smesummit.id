@@ -41,7 +41,7 @@ class Volunteer extends \yii\db\ActiveRecord
             [['name', 'email', 'phone', 'why_you_apply_desc', 'created_at'], 'required'],
             [['why_you_apply_desc','status'], 'string'],
             [['created_at'], 'safe'],
-            [['name', 'email'], 'string', 'max' => 255],
+            [['name', 'email', 'city'], 'string', 'max' => 255],
             [['phone'], 'string', 'max' => 32],
         ];
     }
