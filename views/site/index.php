@@ -34,7 +34,16 @@ $this->title = Yii::t('app', 'SME Summit Backend');
                 '{toggleData}' 
             ],
             'columns' => [
-                'name',
+                [
+                    'attribute' => 'name',
+                    'format'=> 'raw',
+                    'value' =>  function ($model, $index, $widget) { 
+                        return Html::a($model->name,
+                            Url::to(['/participant/view', 'id'=>$model->id]),
+                            ['class'=>'kv-author-link']
+                        );
+                    },
+                ],
                 'company_name',
                 [
                     'attribute' => 'status',
@@ -96,7 +105,16 @@ $this->title = Yii::t('app', 'SME Summit Backend');
                 '{toggleData}' 
             ],
             'columns' => [
-                'name',
+                [
+                    'attribute' => 'name',
+                    'format'=> 'raw',
+                    'value' =>  function ($model, $index, $widget) { 
+                        return Html::a($model->name,
+                            Url::to(['/volunteer/view', 'id'=>$model->id]),
+                            ['class'=>'kv-author-link']
+                        );
+                    },
+                ],
                 'phone',
                 'city',
                 [
@@ -162,7 +180,16 @@ $this->title = Yii::t('app', 'SME Summit Backend');
                 '{toggleData}' 
             ],
             'columns' => [
-                'company_name',
+                [
+                    'attribute' => 'company_name',
+                    'format'=> 'raw',
+                    'value' =>  function ($model, $index, $widget) { 
+                        return Html::a($model->company_name,
+                            Url::to(['/sponsor/view', 'id'=>$model->id]),
+                            ['class'=>'kv-author-link']
+                        );
+                    },
+                ],
                 'company_sector',
                 [
                     'attribute' => 'sponsor_type',
@@ -241,7 +268,16 @@ $this->title = Yii::t('app', 'SME Summit Backend');
                 '{toggleData}' 
             ],
             'columns' => [
-                'name',
+                [
+                    'attribute' => 'name',
+                    'format'=> 'raw',
+                    'value' =>  function ($model, $index, $widget) { 
+                        return Html::a($model->name,
+                            Url::to(['/coacher/view', 'id'=>$model->id]),
+                            ['class'=>'kv-author-link']
+                        );
+                    },
+                ],
                 'company_name',
                 'topic',
                 [
@@ -307,7 +343,16 @@ $this->title = Yii::t('app', 'SME Summit Backend');
                 '{toggleData}' 
             ],
             'columns' => [
-                'name',
+                [
+                    'attribute' => 'name',
+                    'format'=> 'raw',
+                    'value' =>  function ($model, $index, $widget) { 
+                        return Html::a($model->name,
+                            Url::to(['/speaker/view', 'id'=>$model->id]),
+                            ['class'=>'kv-author-link']
+                        );
+                    },
+                ],
                 'company_name',
                 'phone',
                 [
