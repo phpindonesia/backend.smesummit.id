@@ -3,6 +3,8 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use kartik\grid\GridView;
+
+$this->title = Yii::t('app', 'SME Summit Backend');
 ?>
 
 <h1>For Internal Use Only</h1>
