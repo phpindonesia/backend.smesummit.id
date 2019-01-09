@@ -57,17 +57,17 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'last_education',
             // 'experience:ntext',
             [
-                'attribute' => 'phone',
-                'noWrap' => true,
-                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '5%' ]
+                'attribute' => 'position',
+                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '15%' ]
             ],
             [
                 'attribute' => 'topic',
                 'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '30%' ]
             ],
             [
-                'attribute' => 'position',
-                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '15%' ]
+                'attribute' => 'phone',
+                'noWrap' => true,
+                'contentOptions' => [ 'class' => 'kv-align-middle', 'width' => '5%' ]
             ],
             // 'sector',
             // 'created_at',

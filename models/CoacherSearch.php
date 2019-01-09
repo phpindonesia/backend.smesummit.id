@@ -18,7 +18,7 @@ class CoacherSearch extends Coacher
     {
         return [
             [['id'], 'integer'],
-            [['name', 'company_name', 'position', 'email', 'photo', 'last_education', 'experience', 'phone', 'sector', 'topic', 'created_at'], 'safe'],
+            [['name', 'company_name', 'status', 'position', 'email', 'photo', 'last_education', 'experience', 'phone', 'sector', 'topic', 'created_at'], 'safe'],
         ];
     }
 
@@ -60,6 +60,7 @@ class CoacherSearch extends Coacher
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
+            'status' => $this->status,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
