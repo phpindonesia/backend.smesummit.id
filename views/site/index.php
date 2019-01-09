@@ -96,6 +96,7 @@ use kartik\grid\GridView;
             'columns' => [
                 'name',
                 'phone',
+                'city',
                 [
                     'attribute' => 'status',
                     'format'=>'raw',
