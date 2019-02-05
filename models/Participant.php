@@ -68,6 +68,11 @@ class Participant extends \yii\db\ActiveRecord
         ];
     }
 
+    function getDescription()
+    {
+        return "{$this->name} ({$this->email})";
+    }
+
     /**
      * {@inheritdoc}
      * @return ParticipantQuery the active query used by this AR class.
