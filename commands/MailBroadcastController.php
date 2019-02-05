@@ -28,17 +28,33 @@ class MailBroadcastController extends Controller
         return ExitCode::OK;
     }
 
-    public function actionToMemberPhpid($email) 
+    public function actionToMemberPhpid() 
     {
-        Yii::$app->mailer->compose('sme_mail_template', [
-            //'params' => $params,
-            //'url'   => $url
-        ])
-        ->setFrom(['info@smesummit.id'=>'SME Summit 2019'])
-        ->setTo($email)
-        ->setSubject('[SME Summit 2019] Registrasi Sudah dibuka!!!...')
-        ->send();  
-                
+        $db = yii::$app->db;
+        $row = $db->createCommand('
+            select * from member_phpid
+            where mailed is null
+            order by user_id 
+            limit 1
+        ')->queryOne();
+
+        if ($row != null) {
+            Yii::$app->mailer->compose('sme_mail_template', [
+                //'params' => $params,
+                //'url'   => $url
+            ])
+            ->setFrom(['info@smesummit.id'=>'SME Summit 2019'])
+            ->setTo($row['email'])
+            ->setSubject('[SME Summit 2019] Registrasi Sudah dibuka!!!...')
+            ->send();  
+
+            $db->createCommand('
+            update member_phpid
+            set mailed = now()
+            where user_id = '.$row['user_id']
+            )->execute();
+
+        }                
 
     }
 }
