@@ -135,9 +135,19 @@ $this->params['breadcrumbs'][] = $this->title;
                         'valueColOptions' => [ 'style'=>'width:30%' ],
                     ],
                     [
-                        'attribute' => 'created_at',
+                        'attribute' => 'payment_amount',
+                        'format' => ['decimal',2],
                         'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
                         'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
+                        'attribute' => 'created_at',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:80%' ],
                     ],
                 ],
             ],
