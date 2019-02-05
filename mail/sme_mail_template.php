@@ -282,19 +282,15 @@
                                           <div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 											<p>REGISTRASI SME SUMMIT 2019 Sudah dibuka...</p>
 
-											<p>Register NOW!... <a href="https://www.smesummit.id/register">https://www.smesummit.id/register</a></p>
+											<p><a href="https://www.smesummit.id/register">https://www.smesummit.id/register</a></p>
 
 											<p>Ini adalah saatnya transformasi digital untuk Perusahaan Non-Teknologi Indonesia...</p>
 
 											<p>Jika anda adalah Direktur perusahaan, Head/Senior of IT Department, Profesional Freelancer, Academic/Lecturer maka anda sangat direkomendasi untuk ikut acara ini..</p>
 
-											<p>Di acara ini anda akan mendapatkan wawasan dan ide baru untuk memulai transformasi digital di perusahaan atau perusahaan tempat anda bekerja.</p>
-
 											<p>Akan ada banyak insight seputar Digital Marketing, Integrasi perusahaan anda dengan Financial Technology, tips
 											me-manage inhouse Talent IT atau Konsultan pihak ketiga perusahaan anda dan akan ada update seputar regulasi dan
-											insentif pemerintah Indonesia untuk UKM, perusahaan non-teknologi yang ingin bertumbuh pesat di era digital saat ini.</p>
-
-											<p>ini adalah event paket-komplit karena semua aspek yang anda butuhkan ada dalam rangka untuk persiapan TRANSFORMASI DIGITAL dan pertumbuhan EKSPONENTIAL perusahaan ..</p>
+											insentif pemerintah.</p>
 
 											<p>Daftar dan transfer sekarang untuk mendapatkan harga Early Bird dengan potongan 50%. Harga tiket HANYA Rp. 500.000 di sepanjang bulan Februari ini..</p>
 
@@ -308,7 +304,7 @@
 											info@smesummit.id<br/>
 											WA Only: 0895-3363-09253</p>
 
-											<p>Salam dari kami seluruh Panitia ...<br/>
+											<p>Panitia<br/>
 											https://www.smesummit.id/organizer</p>
 											<p>
 											<img src="https://www.smesummit.id/images/banner/Promo_4_Februari_2019.jpg" style="width: 100%;"/>
