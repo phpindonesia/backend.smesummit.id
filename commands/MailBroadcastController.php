@@ -34,7 +34,7 @@ class MailBroadcastController extends Controller
             //'params' => $params,
             //'url'   => $url
         ])
-        ->setFrom('info@smesummit.id')
+        ->setFrom(['info@smesummit.id'=>'SME Summit 2019'])
         ->setTo($email)
         ->setSubject('[SME Summit 2019] Registrasi Sudah dibuka!!!...')
         ->send();  
