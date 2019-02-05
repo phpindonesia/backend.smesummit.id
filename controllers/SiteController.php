@@ -14,6 +14,7 @@ use app\models\SpeakerSearch;
 use app\models\ParticipantSearch;
 use app\models\VolunteerSearch;
 use app\models\SponsorSearch;
+use app\models\PaymentConfirmationSearch;
 
 class SiteController extends Controller
 {
@@ -76,6 +77,8 @@ class SiteController extends Controller
         $dataProviderVolunteer = $searchModelVolunteer->search(Yii::$app->request->queryParams);
         $searchModelSpeaker = new SpeakerSearch();
         $dataProviderSpeaker = $searchModelSpeaker->search(Yii::$app->request->queryParams);
+        $searchModelPayment = new PaymentConfirmationSearch();
+        $dataProviderPayment = $searchModelPayment->search(Yii::$app->request->queryParams);
 
         $pageSize = 5;
         $dataProviderParticipant->pagination->pageSize = $pageSize;
@@ -90,11 +93,13 @@ class SiteController extends Controller
             'dataProviderSponsor' => $dataProviderSponsor,
             'dataProviderVolunteer' => $dataProviderVolunteer,
             'dataProviderSpeaker' => $dataProviderSpeaker,
+            'dataProviderPayment' => $dataProviderPayment,
             'searchModelParticipant' => $searchModelParticipant,
             'searchModelCoacher' => $searchModelCoacher,
             'searchModelSponsor' => $searchModelSponsor,
             'searchModelVolunteer' => $searchModelVolunteer,
             'searchModelSpeaker' => $searchModelSpeaker,
+            'searchModelPayment' => $searchModelPayment,
         ]);
     }
 

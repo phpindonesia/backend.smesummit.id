@@ -39,11 +39,27 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Participants', 'url' => ['/participant/index'], 'visible' => !Yii::$app->user->isGuest],
-            ['label' => 'Sponsors', 'url' => ['/sponsor/index'], 'visible' => !Yii::$app->user->isGuest],
-            ['label' => 'Speakers', 'url' => ['/speaker/index'], 'visible' => !Yii::$app->user->isGuest],
-            ['label' => 'Coachers', 'url' => ['/coacher/index'], 'visible' => !Yii::$app->user->isGuest],
-            ['label' => 'Volunteers', 'url' => ['/volunteer/index'], 'visible' => !Yii::$app->user->isGuest],
+            [
+                'label' => 'Participants', 
+                'url' => ['/participant/index'], 
+                'visible' => !Yii::$app->user->isGuest,
+                'items' => [
+                    ['label' => 'Participants', 'url' => ['/participant/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Payment Confirmations', 'url' => ['/payment-confirmation/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Vouchers', 'url' => ['/voucher/index'], 'visible' => !Yii::$app->user->isGuest],
+                ],
+            ],
+            [
+                'label' => 'Committee', 
+                'url' => ['/volunteer/index'], 
+                'visible' => !Yii::$app->user->isGuest,
+                'items' => [
+                    ['label' => 'Sponsors', 'url' => ['/sponsor/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Speakers', 'url' => ['/speaker/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Coachers', 'url' => ['/coacher/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Volunteers', 'url' => ['/volunteer/index'], 'visible' => !Yii::$app->user->isGuest],
+                ],
+            ],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
