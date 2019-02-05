@@ -18,8 +18,9 @@ class ParticipantSearch extends Participant
     {
         return [
             [['id'], 'integer'],
-            [['name', 'company_name', 'position', 'sector_to_be_coached', 'company_sector', 'status', 'email', 'phone', 'problem_desc', 'created_at'], 'safe'],
-        ];
+            [['name', 'company_name', 'company_sector', 'position', 'sector_to_be_coached', 'email', 'phone', 'problem_desc', 'status', 'voucher_code', 'payment_instruction_email_sent', 'created_at'], 'safe'],
+            [['payment_amount'], 'number'],
+         ];
     }
 
     /**
@@ -60,7 +61,7 @@ class ParticipantSearch extends Participant
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
-            'status' => $this->status,
+            'payment_amount' => $this->payment_amount, 
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
@@ -70,8 +71,11 @@ class ParticipantSearch extends Participant
             ->andFilterWhere(['like', 'company_sector', $this->company_sector])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'problem_desc', $this->problem_desc]);
-
+            ->andFilterWhere(['like', 'problem_desc', $this->problem_desc])
+            ->andFilterWhere(['like', 'status', $this->status])
+            ->andFilterWhere(['like', 'voucher_code', $this->voucher_code])
+            ->andFilterWhere(['like', 'payment_instruction_email_sent', $this->payment_instruction_email_sent]);
+ 
         return $dataProvider;
     }
 }

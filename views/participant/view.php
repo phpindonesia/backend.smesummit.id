@@ -112,6 +112,21 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'columns' => [
                     [
+                        'attribute' => 'payment_amount',
+                        'format' => ['decimal',2],
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                    [
+                        'attribute' => 'voucher_code',
+                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
+                    ],
+                ],
+            ],
+            [
+                'columns' => [
+                    [
                         'attribute' => 'status',
                         'format'=>'raw',
                         'value' => function ($form, $widget) { 
@@ -135,19 +150,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         'valueColOptions' => [ 'style'=>'width:30%' ],
                     ],
                     [
-                        'attribute' => 'payment_amount',
-                        'format' => ['decimal',2],
-                        'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
-                        'valueColOptions' => [ 'style'=>'width:30%' ],
-                    ],
-                ],
-            ],
-            [
-                'columns' => [
-                    [
                         'attribute' => 'created_at',
                         'labelColOptions' => [ 'style'=>'width:20%;text-align:right;' ],
-                        'valueColOptions' => [ 'style'=>'width:80%' ],
+                        'valueColOptions' => [ 'style'=>'width:30%' ],
                     ],
                 ],
             ],

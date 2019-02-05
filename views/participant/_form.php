@@ -50,6 +50,19 @@ use yii\widgets\ActiveForm;
 
     <div class="row">
         <div class="col-md-6">
+        <?= $form->field($model, 'payment_amount')->textInput([
+            'type' => 'number', 
+            'step' => '1',
+            'placeholder' => "0",
+        ]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'voucher_code')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
         <?= $form->field($model, 'status')->dropDownList([ 
             'New Request' => 'New Request', 
             'Invoice Sent' => 'Invoice Sent', 
@@ -57,13 +70,6 @@ use yii\widgets\ActiveForm;
             'Canceled' => 'Canceled', 
             'Rejected' => 'Rejected', 
         ], ['prompt' => '* Choose Status *']) ?>
-        </div>
-        <div class="col-md-6">
-        <?= $form->field($model, 'payment_amount')->textInput([
-            'type' => 'number', 
-            'step' => '1',
-            'placeholder' => "0",
-        ]) ?>
         </div>
     </div>
 
