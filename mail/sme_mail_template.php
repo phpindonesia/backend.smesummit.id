@@ -287,7 +287,7 @@ Perkenalkan nama saya Peter Kambey, ketua pelaksana SME Summit 2019. Terima kasi
 
 Saya tau bahwa anda semua tertarik untuk mengikuti event yang bagus ini tapi banyak di antara anda yang terkendala masalah biaya. Acara ini adalah acara kita, acara komunitas, acara dari sebuah perkumpulan sukarela yang sudah memberi banyak manfaat buat kita, itu sebabnya anda sudah sepatutnya hadir. <br/><br/>
 
-Saya memahami betul masalah biaya, oleh karena saya mencoba mencari jalan keluar win-win solution  dan menawarkan member PHPID dua opsi agar anda bisa hadir dalam acara ini:<br/><br/>
+Saya memahami betul masalah ini, oleh karena itu saya mencoba mencari jalan keluar win-win solution dan menawarkan member PHPID dua opsi agar anda bisa hadir dalam acara ini:<br/><br/>
 
 1. <strong>Diskon tambahan sebesar 20% dari harga Early Bird </strong> yang berlaku selama bulan Februari ini. Harga early bird sebesar Rp. 500.000 dan member PHPID (member komunitas yang pernah mendaftar di website membership.phpindonesia.id) hanya perlu membayar <strong>Rp. 400.000</strong><br/><br/>
 
@@ -296,18 +296,18 @@ Selanjutnya anda juga ikut mendapat 10%. Jadi, dari Rp. 450.000 yang ditransfer 
 
 Program Referral ini, akan saya umumkan di main group PHPID Facebook agar semua member PHPID ikut terlibat menjadi referal, tapi yang menbedakan anda dengan member Facebook adalah Free Seat (kompensasi 4 peserta menggunaka kode referral anda) hanya berlaku buat teman-teman yang menerima email ini secara khusus. Free Seat ini adalah benefit dan bentuk penghargaan saya untuk teman-teman yang sudah mendaftar di aplikasi membership PHP Indonesia.<br/><br/>
 
-Jika anda berminat mengikuti program referral ini, silahkan reply email saya ini untuk mendapatkan kode Referral Unik yang milik anda. Referensikan kode referral anda ini ke teman, perusahaan, koperasi, freelancer, atau orang yang menurut anda cocok untuk mengikuti event akbar kita ini.<br/><br/>
+Jika anda berminat mengikuti program referral ini, silahkan reply email saya ini untuk mendapatkan Kode Referral Unik milik anda. Referensikan kode referral anda ini ke teman, perusahaan, koperasi, freelancer, atau orang yang menurut anda cocok untuk mengikuti event akbar kita ini.<br/><br/>
 
-- Bagikan kepada mereka Link Registrasi Peserta ini: https://www.smesummit.id/register/<br/>
+- Bagikan kepada mereka Link Registrasi Peserta ini: <a href="https://www.smesummit.id/register/">https://www.smesummit.id/register/</a><br/>
 - Jangan lupa meminta mereka memasukan kode referral milik anda di form di link di atas.<br/>
-- Jika mereka bertanya-tanya manfaat apa yang akan mereka dapatkan, anda bisa mencontek info yang ada di FAQ: https://www.smesummit.id/faq<br/>
+- Jika mereka bertanya-tanya manfaat apa yang akan mereka dapatkan, anda bisa mencontek info yang ada di FAQ: <a href="https://www.smesummit.id/faq">https://www.smesummit.id/faq<a/><br/>
 - Minta mereka mentransfer Dana sebesar Rp. 450.000 ke Rekening:<br/>
 Bank: Bank Mandiri<br/>
 Account No: 157.000.320.3040<br/>
 Account Name: Christine Veronica<br/><br/>
 
-- jika anda lupa no rekeningnya anda bisa mengeceknya di: https://www.smesummit.id/tickets<br/><br/>
-- Jika sudah ditransfer, jangan lupa minta untuk dikonfirmasi ulang dan upload bukti transfer di : https://www.smesummit.id/payment-confirmation/<br/>
+- jika anda lupa no rekeningnya anda bisa mengeceknya di: <a href="https://www.smesummit.id/tickets">https://www.smesummit.id/tickets</a><br/><br/>
+- Jika sudah ditransfer, jangan lupa minta untuk dikonfirmasi ulang dan upload bukti transfer di : <a href="https://www.smesummit.id/payment-confirmation/">https://www.smesummit.id/payment-confirmation/</a><br/>
 - Kami akan menghitung referral anda dan jumlah transferan yang sudah masuk menggunakan referral anda. Jika sudah 4 (atau kelipatannya) anda berhak mendapat kode voucher gratis 100% yang akan dikirim email anda<br/>
 - Jika anda ingin bertanya lebih lanjut mengenai isi email ini, jangan ragu untuk mereply email ini, karena suksesnya acara ini adalah sukses kita bersama.<br/><br/>
 
