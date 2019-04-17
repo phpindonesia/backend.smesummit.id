@@ -16,7 +16,7 @@ $config = [
 	'as access' => [
 		'class' => 'mdm\admin\components\AccessControl',
 		'allowActions' => [
-			'site/*',
+			'site/login',
 			//'some-controller/some-action',
             /**
              * silakn hpus jika tidak diperlukan
